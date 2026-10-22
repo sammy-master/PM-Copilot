@@ -1,0 +1,52 @@
+# ============================================================
+# PM Copilot - Backend Dependencies
+# Install with: pip install -r requirements.txt
+#
+# NOTE: Versions are kept flexible (>=) to support Python 3.14.
+#       numpy>=2.0 is required — older numpy has no Python 3.14 wheels.
+# ============================================================
+
+# --- IMPORTANT: Pin numpy first so pip uses pre-built wheels ---
+numpy>=2.0.0
+
+# --- Web Framework ---
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+
+# --- Database ---
+sqlalchemy>=2.0.35
+asyncpg>=0.29.0          # Async PostgreSQL driver
+alembic>=1.13.3          # Database migrations
+
+# --- Auth ---
+python-jose[cryptography]>=3.3.0   # JWT tokens
+passlib[bcrypt]>=1.7.4             # Password hashing
+python-multipart>=0.0.12           # Form data / file uploads
+
+# --- AI & LLM (newer versions allow numpy>=2.0) ---
+langchain>=0.3.15
+langchain-community>=0.3.15
+langchain-ollama>=0.2.1
+langchain-openai>=0.2.12
+langchain-google-genai>=2.0.10
+
+# --- Vector Database ---
+chromadb>=0.6.0
+
+# --- Embeddings ---
+sentence-transformers>=3.3.0
+
+# --- Document Processing ---
+pypdf>=5.1.0             # PDF reading
+python-docx>=1.1.2       # DOCX reading
+
+# --- Environment & Config ---
+python-dotenv>=1.0.1
+pydantic-settings>=2.5.2
+pydantic[email]>=2.9.2      # [email] adds email-validator for EmailStr
+
+# --- HTTP Client ---
+httpx>=0.27.2
+
+# --- Utilities ---
+aiofiles>=24.1.0         # Async file operations
